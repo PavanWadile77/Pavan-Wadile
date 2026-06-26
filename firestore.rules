@@ -1,0 +1,52 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Admin check function
+    function isAdmin() {
+      return request.auth != null && request.auth.token.email == "pavanwadile777@gmail.com";
+    }
+
+    // Admin-only collections
+    match /users/{document=**} {
+      allow read, write: if isAdmin();
+    }
+
+    // Public Read, Admin Write collections
+    match /projects/{document=**} { allow read: if true; allow write: if isAdmin(); }
+    match /blogs/{document=**} { allow read: if true; allow write: if isAdmin(); }
+    match /achievements/{document=**} { allow read: if true; allow write: if isAdmin(); }
+    match /certificates/{document=**} { allow read: if true; allow write: if isAdmin(); }
+    match /skills/{document=**} { allow read: if true; allow write: if isAdmin(); }
+    match /gallery/{document=**} { allow read: if true; allow write: if isAdmin(); }
+    match /testimonials/{document=**} { allow read: if true; allow write: if isAdmin(); }
+    match /seo_settings/{document=**} { allow read: if true; allow write: if isAdmin(); }
+    match /resume/{document=**} { allow read: if true; allow write: if isAdmin(); }
+    match /social_links/{document=**} { allow read: if true; allow write: if isAdmin(); }
+    match /site_settings/{document=**} { allow read: if true; allow write: if isAdmin(); }
+
+    // Public Create, Admin Read/Write/Delete collections
+    match /contact_messages/{document=**} {
+      allow read, update, delete: if isAdmin();
+      allow create: if true 
+                    && request.resource.data.keys().hasAll(['name', 'email', 'message'])
+                    && request.resource.data.name is string
+                    && request.resource.data.email is string
+                    && request.resource.data.message is string
+                    && request.resource.data.name.size() > 0
+                    && request.resource.data.message.size() > 0;
+    }
+    
+    // Legacy support for messages just in case
+    match /messages/{document=**} {
+      allow read, update, delete: if isAdmin();
+      allow create: if true;
+    }
+
+    match /visitor_stats/{document=**} {
+      allow read, update, delete: if isAdmin();
+      // Allow public creation of stats but prevent manipulation of critical fields
+      allow create: if true;
+    }
+  }
+}

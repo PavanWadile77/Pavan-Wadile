@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pavan Kishor Wadile - Personal Portfolio
+
+A complete, production-ready personal branding website built with Next.js 15, React 19, TypeScript, Tailwind CSS v4, Framer Motion, and Firebase.
+
+## Features
+- **Next.js 15 App Router**: Modern and fast architecture.
+- **Premium UI**: Glassmorphism, smooth animations, and a responsive design using Shadcn UI.
+- **Dark/Light Mode**: Full theme support.
+- **PWA Ready**: Offline capabilities and installable.
+- **SEO Optimized**: Dynamic metadata, sitemap, robots.txt, and structured data.
+- **Admin Dashboard**: Manage projects, blogs, and settings (powered by Firebase).
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
+- Firebase Account
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Installation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. Create a `.env.local` file based on `.env.example`:
+   ```bash
+   cp .env.example .env.local
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Update `.env.local` with your Firebase credentials.
 
-## Learn More
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) to see the site.
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment Guide
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Vercel Deployment (Recommended)
+1. Push your code to GitHub.
+2. Go to [Vercel](https://vercel.com/) and create a new project.
+3. Import your GitHub repository.
+4. Add the Environment Variables from your `.env.local` file to the Vercel project settings.
+5. Click **Deploy**. Vercel will automatically detect the Next.js framework and build the project.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Firebase Deployment
+If you prefer Firebase Hosting:
+1. Initialize Firebase Hosting:
+   ```bash
+   firebase init hosting
+   ```
+2. Build the project:
+   ```bash
+   npm run build
+   ```
+3. Deploy:
+   ```bash
+   firebase deploy --only hosting
+   ```

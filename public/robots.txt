@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /admin
+
+# Host
+Host: https://pavanwadile.com
+
+# Sitemaps
+Sitemap: https://pavanwadile.com/sitemap.xml

@@ -1,0 +1,22 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    
+    function isAdmin() {
+      return request.auth != null && request.auth.token.email == "pavanwadile777@gmail.com";
+    }
+
+    match /profile/{allPaths=**} { allow read: if true; allow write: if isAdmin(); }
+    match /projects/{allPaths=**} { allow read: if true; allow write: if isAdmin(); }
+    match /gallery/{allPaths=**} { allow read: if true; allow write: if isAdmin(); }
+    match /blog/{allPaths=**} { allow read: if true; allow write: if isAdmin(); }
+    match /certificates/{allPaths=**} { allow read: if true; allow write: if isAdmin(); }
+    match /resume/{allPaths=**} { allow read: if true; allow write: if isAdmin(); }
+    
+    // Default fallback
+    match /{allPaths=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+  }
+}
