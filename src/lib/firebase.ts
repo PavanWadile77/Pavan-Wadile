@@ -1,8 +1,8 @@
-import { initializeApp, getApps, getApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
-import { getFirestore } from 'firebase/firestore';
-import { getStorage } from 'firebase/storage';
-import { getAnalytics, isSupported } from 'firebase/analytics';
+import { initializeApp, getApps, getApp, FirebaseApp } from 'firebase/app';
+import { getAuth, Auth } from 'firebase/auth';
+import { getFirestore, Firestore } from 'firebase/firestore';
+import { getStorage, FirebaseStorage } from 'firebase/storage';
+import { getAnalytics, isSupported, Analytics } from 'firebase/analytics';
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -14,20 +14,44 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
-const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+let app = undefined as unknown as FirebaseApp;
+let auth = undefined as unknown as Auth;
+let db = undefined as unknown as Firestore;
+let storage = undefined as unknown as FirebaseStorage;
+let analytics = null as unknown as Analytics;
 
-const auth = getAuth(app);
-const db = getFirestore(app);
-const storage = getStorage(app);
+const isValidConfig = () => {
+  return (
+    firebaseConfig.apiKey &&
+    firebaseConfig.authDomain &&
+    firebaseConfig.projectId &&
+    firebaseConfig.storageBucket &&
+    firebaseConfig.messagingSenderId &&
+    firebaseConfig.appId
+  );
+};
 
-// Initialize Analytics only on the client side
-let analytics = null;
-if (typeof window !== 'undefined') {
-  isSupported().then((supported) => {
-    if (supported) {
-      analytics = getAnalytics(app);
-    }
-  });
+if (isValidConfig()) {
+  app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+  
+  // Ensure Firebase Auth is never initialized during server-side prerendering
+  if (typeof window !== 'undefined') {
+    auth = getAuth(app);
+  }
+  
+  db = getFirestore(app);
+  storage = getStorage(app);
+
+  // Initialize Analytics only in the browser
+  if (typeof window !== 'undefined') {
+    isSupported().then((supported) => {
+      if (supported && app) {
+        analytics = getAnalytics(app);
+      }
+    });
+  }
+} else {
+  console.warn("Firebase configuration is missing or incomplete. Firebase will not be initialized to prevent build crashes.");
 }
 
 export { app, auth, db, storage, analytics };
