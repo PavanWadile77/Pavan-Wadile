@@ -1,62 +1,76 @@
-# Pavan Kishor Wadile - Personal Portfolio
+# Pavan Wadile — Personal Portfolio 🚀
 
-A complete, production-ready personal branding website built with Next.js 15, React 19, TypeScript, Tailwind CSS v4, Framer Motion, and Firebase.
+A modern personal portfolio and professional branding website for **Pavan Wadile**, an Information Technology student and developer.
 
-## Features
-- **Next.js 15 App Router**: Modern and fast architecture.
-- **Premium UI**: Glassmorphism, smooth animations, and a responsive design using Shadcn UI.
-- **Dark/Light Mode**: Full theme support.
-- **PWA Ready**: Offline capabilities and installable.
-- **SEO Optimized**: Dynamic metadata, sitemap, robots.txt, and structured data.
-- **Admin Dashboard**: Manage projects, blogs, and settings (powered by Firebase).
+## ✨ Features
 
-## Getting Started
+- Personal portfolio
+- Projects showcase
+- Skills and technology profile
+- Education and achievements
+- Blog/content support
+- Contact workflow
+- Admin dashboard
+- Firebase integration
+- SEO metadata and sitemap
+- Responsive UI
+- Dark/light theme support
+- PWA-ready architecture
+- Modern animations
+
+## 🛠 Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Firebase
+- Framer Motion
+- Tiptap
+- Lucide React
+- Next Sitemap
+- PWA tooling
+
+## ▶️ Getting Started
 
 ### Prerequisites
-- Node.js (v18 or higher)
-- npm or yarn
-- Firebase Account
+
+- Node.js 18+
+- npm
+- Firebase project for features that require backend services
 
 ### Installation
 
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
+```bash
+git clone https://github.com/PavanWadile77/Pavan-Wadile.git
+cd Pavan-Wadile
+npm install
+```
 
-2. Create a `.env.local` file based on `.env.example`:
-   ```bash
-   cp .env.example .env.local
-   ```
+Create a local environment file based on the repository's example configuration, then start the development server:
 
-3. Update `.env.local` with your Firebase credentials.
+```bash
+npm run dev
+```
 
-4. Run the development server:
-   ```bash
-   npm run dev
-   ```
-   Open [http://localhost:3000](http://localhost:3000) to see the site.
+Build for production:
 
-## Deployment Guide
+```bash
+npm run build
+npm start
+```
 
-### Vercel Deployment (Recommended)
-1. Push your code to GitHub.
-2. Go to [Vercel](https://vercel.com/) and create a new project.
-3. Import your GitHub repository.
-4. Add the Environment Variables from your `.env.local` file to the Vercel project settings.
-5. Click **Deploy**. Vercel will automatically detect the Next.js framework and build the project.
+## 🔐 Environment Variables
 
-### Firebase Deployment
-If you prefer Firebase Hosting:
-1. Initialize Firebase Hosting:
-   ```bash
-   firebase init hosting
-   ```
-2. Build the project:
-   ```bash
-   npm run build
-   ```
-3. Deploy:
-   ```bash
-   firebase deploy --only hosting
-   ```
+Configure Firebase and other service credentials locally. Never commit production secrets or service-account credentials.
+
+## 🌐 Portfolio
+
+GitHub: https://github.com/PavanWadile77
+
+## 👨‍💻 About
+
+**Pavan Wadile**  
+B.Tech Information Technology Student
+
+Interested in software development, AI-assisted applications, web technologies, and practical problem solving.
