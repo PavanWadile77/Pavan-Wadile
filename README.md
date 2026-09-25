@@ -1,11 +1,9 @@
-# Pavan Wadile — Personal Portfolio 🚀
+# Pavan Wadile — Developer Portfolio 🚀
 
-A modern personal portfolio and professional branding website for **Pavan Wadile**, an Information Technology student and developer.
+A modern personal portfolio and professional branding platform showcasing **projects, skills, achievements, content, and developer work**.
 
 ## ✨ Features
-
-- Personal portfolio
-- Projects showcase
+- Project showcase
 - Skills and technology profile
 - Education and achievements
 - Blog/content support
@@ -14,63 +12,35 @@ A modern personal portfolio and professional branding website for **Pavan Wadile
 - Firebase integration
 - SEO metadata and sitemap
 - Responsive UI
-- Dark/light theme support
+- Dark/light theme
 - PWA-ready architecture
 - Modern animations
 
-## 🛠 Tech Stack
-
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-- Firebase
-- Framer Motion
-- Tiptap
-- Lucide React
-- Next Sitemap
-- PWA tooling
+## 🛠️ Tech Stack
+**Next.js · React · TypeScript · Tailwind CSS · Firebase · Framer Motion · Tiptap · Lucide React**
 
 ## ▶️ Getting Started
-
-### Prerequisites
-
-- Node.js 18+
-- npm
-- Firebase project for features that require backend services
-
-### Installation
-
 ```bash
 git clone https://github.com/PavanWadile77/Pavan-Wadile.git
 cd Pavan-Wadile
 npm install
-```
-
-Create a local environment file based on the repository's example configuration, then start the development server:
-
-```bash
 npm run dev
 ```
 
-Build for production:
-
+Production:
 ```bash
 npm run build
 npm start
 ```
 
-## 🔐 Environment Variables
+## 🔐 Security
+Configure Firebase and other services through local environment variables. Never commit private credentials.
 
-Configure Firebase and other service credentials locally. Never commit production secrets or service-account credentials.
-
-## 🌐 Portfolio
-
-GitHub: https://github.com/PavanWadile77
+## 🔗 Links
+- 👤 [GitHub Profile](https://github.com/PavanWadile77)
+- 💻 [Repository](https://github.com/PavanWadile77/Pavan-Wadile)
 
 ## 👨‍💻 About
+**Pavan Wadile** · B.Tech Information Technology Student
 
-**Pavan Wadile**  
-B.Tech Information Technology Student
-
-Interested in software development, AI-assisted applications, web technologies, and practical problem solving.
+Interested in software development, AI-assisted applications, modern web technologies, mobile development, and practical problem solving.
