@@ -14,7 +14,6 @@ A modern personal portfolio and professional branding platform showcasing **proj
 - Responsive UI
 - Dark/light theme
 - PWA-ready architecture
-- Modern animations
 
 ## 🛠️ Tech Stack
 **Next.js · React · TypeScript · Tailwind CSS · Firebase · Framer Motion · Tiptap · Lucide React**
@@ -32,9 +31,6 @@ Production:
 npm run build
 npm start
 ```
-
-## 🔐 Security
-Configure Firebase and other services through local environment variables. Never commit private credentials.
 
 ## 🔗 Links
 - 👤 [GitHub Profile](https://github.com/PavanWadile77)
