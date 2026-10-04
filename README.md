@@ -1,3 +1,13 @@
+
+
+<div align="center">
+
+**Developer Portfolio • Project Showcase**
+
+<img src="https://img.shields.io/badge/Web-Development-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white">
+
+</div>
+
 <div align="center">
 
 # 👋 Hi, I'm Pavan Wadile
@@ -198,5 +208,19 @@ Turning ideas into deployable products
 
 <br/><br/>
 > **Building today. Learning every day. Shipping what matters. 🚀**
+
+</div>
+
+## 🔧 Engineering Focus
+
+Developer profile, technical projects, skills and professional presence.
+
+---
+
+<div align="center">
+
+**Pavan Wadile · B.Tech Information Technology**
+
+[GitHub](https://github.com/PavanWadile77)
 
 </div>
