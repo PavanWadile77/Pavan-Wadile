@@ -19,7 +19,7 @@
 <a href="mailto:pavanwadile777@gmail.com"><img src="https://img.shields.io/badge/Gmail-Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 <a href="https://pavanwadile77.wixsite.com/wadile"><img src="https://img.shields.io/badge/Portfolio-Visit-111827?style=for-the-badge&logo=googlechrome&logoColor=white" /></a>
 
-<img src="https://komarev.com/ghpvc/?username=PavanWadile77&style=for-the-badge&color=2563EB&label=PROFILE+VIEWS" />
+<img src="https://hits.sh/github.com/PavanWadile77/Pavan-Wadile.svg?style=for-the-badge&label=REPOSITORY%20VIEWS&color=2563eb" alt="Repository views" />
 
 </div>
 
